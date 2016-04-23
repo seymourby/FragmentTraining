@@ -28,6 +28,7 @@ public class FirstFragment extends Fragment{
                 Log.d(TAG, "Move to SecondFragment");
                 FragmentManager manager = getFragmentManager();
                 FragmentTransaction transaction = manager.beginTransaction();
+                transaction.addToBackStack(null);
                 transaction.replace(R.id.fragment_container, new SecondFragment());
                 transaction.commit();
             }

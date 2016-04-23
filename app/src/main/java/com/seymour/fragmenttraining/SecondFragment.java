@@ -20,21 +20,15 @@ public class SecondFragment extends Fragment {
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView");
         View mView = inflater.inflate(R.layout.fragment_second, container, false);
-/*
-        mView.findViewById(R.id.toSecondFragmentButton).setOnClickListener(new View.OnClickListener() {
+
+        mView.findViewById(R.id.showDialogFragmentButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "");
-
+                Log.d(TAG, "Show DialogFragment");
+                DialogFragment dialogFragment = DialogFragment.newInstance();
+                dialogFragment.show(getFragmentManager(),null);
             }
         });
-
-        */
         return mView;
     }
-
-
-
-
-
 }
